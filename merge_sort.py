@@ -1,4 +1,10 @@
 def mergesort(alist):
+    """
+    This is an implementation of the merge sort function.
+    :param alist: An unsorted list that is being passed through the function
+    :return: Returns nothing, as the original list is being modified. No return needed and you can print out the same
+            list you entered into the function!
+    """
     if len(alist) > 1:  # checks if the list is already at a length of one -- meaning the recursion has reached the
         # end, and will therefor end the recursion going down.
         left = alist[:len(alist) // 2]  # splits the list into a left and right half, using the len // 2 function so
