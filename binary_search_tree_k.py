@@ -1,4 +1,4 @@
-
+# description yet to be framed
 
 def bin_search_tree(original_list,query_number,error=0):
     leng=len(original_list)
