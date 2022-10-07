@@ -1,5 +1,4 @@
 from merge_sort import mergesort
-from InsertionSortv3 import insertion_sort
 from time import time
 import random
 import matplotlib.pyplot as plt
