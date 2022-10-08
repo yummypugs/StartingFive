@@ -49,6 +49,6 @@ def mergesort(alist):
             sorted_index += 1
 
 
-#list_ = [6, 5, 12, 10, 9, 1]
-#mergesort(list_)
-#print(list_)
+list_ = [6, 5, 12, 10, 9, 1,3,7,123,54,1233,54,213,41,213,124,5647,254,1234]
+mergesort(list_)
+print(list_)
