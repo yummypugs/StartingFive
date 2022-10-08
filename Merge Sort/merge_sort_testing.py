@@ -3,19 +3,19 @@ from time import time
 import random
 import matplotlib.pyplot as plt
 
-
 # we want to creat list with different length
-lengths_to_run = [5, 50, 500,1000,10000]
-#lengths_to_run = [random.randint(1, 100) for i in range(1, random.randint(6, 100))]
-#lengths_to_run = [i for i in range(1, 10000, 50)]
+lengths_to_run = [5, 50, 500, 1000, 10000]
+# lengths_to_run = [random.randint(1, 100) for i in range(1, random.randint(6, 100))]
+# lengths_to_run = [i for i in range(1, 10000, 50)]
 
 sorted_lists_results = []
 inversely_sorted_lists_results = []
 random_lists_results = []
 time_to_run = 0
 total = []
-#max_iterations = int(input("Enter the amount of iterations you want to do: "))
+# max_iterations = int(input("Enter the amount of iterations you want to do: "))
 max_iterations = 1
+
 
 def run_sort(list_, scenario):
     if scenario == "good":
