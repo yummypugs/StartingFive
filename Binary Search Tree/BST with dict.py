@@ -1,40 +1,40 @@
 class Node:
-    def __init__(self, key, data):
-        self.left = None
-        self.right = None
+    def __init__(self, key, value):
+        self.left_child = None
+        self.right_child = None
         self.key = key
-        self.data = data
-        self.combo = {self.key: self.data}
+        self.value = value
+        #self.combo = {self.key: self.value}
 
     # Insert method to create nodes
-    def insert(self, key, data):
+    def insert(self, key, value):
         if self.key:
             if key < self.key:
-                if self.left is None:
-                    self.left = Node(key, data)
+                if self.left_child is None:
+                    self.left_child = Node(key, value)
                 else:
-                    self.left.insert(key, data)
+                    self.left_child.insert(key, value)
             elif key > self.key:
-                if self.right is None:
-                    self.right = Node(key, data)
+                if self.right_child is None:
+                    self.right_child = Node(key, value)
                 else:
-                    self.right.insert(key, data)
+                    self.right_child.insert(key, value)
         else:
             self.key = key
-            self.data = data
+            self.value = value
 
     # get method to compare the value with nodes
     def get(self, name):
         if name < self.key:
-            if self.left is None:
+            if self.left_child is None:
                 return str(name) + " Not Found"
-            return self.left.get(name)
+            return self.left_child.get(name)
         elif name > self.key:
-            if self.right is None:
+            if self.right_child is None:
                 return str(name) + " Not Found"
-            return self.right.get(name)
+            return self.right_child.get(name)
         else:
-            print(str(self.data))
+            return str(self.value)
 
 
 root = Node("Vahe", 55)
@@ -42,10 +42,11 @@ root.insert("Thomas", 45)
 root.insert("Zeke", 123)
 root.insert("Al", 23)
 root.insert("Vahy", 66)
+
 #root.insert("Vahe")  # is skipped as it is already implemented
 
-root.get("Thomas")
-root.get("Vahe")
-root.get("Zeke")
-root.get("Al")
-root.get("Alex")
+print(root.get("Thomas"))
+print(root.get("Vahe"))
+print(root.get("Zeke"))
+print(root.get("Al"))
+print(root.get("Alex"))
