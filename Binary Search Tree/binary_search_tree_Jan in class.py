@@ -18,6 +18,8 @@ class Node():
         pass
 
 root_node = Node(4)
+root_node.insert(5)
+root_node.insert(3)
 print(root_node.key)
 print(root_node.left_children)
 print(root_node.right_children)
