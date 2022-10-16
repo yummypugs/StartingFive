@@ -1,4 +1,4 @@
-class Node():
+class Node:
     def __init__(self, key):
         self.key = key
         self.left_children = None
@@ -11,15 +11,15 @@ class Node():
         else: 
             self.right_children = node
 
-    def delete():
+    def delete(self):
         pass
 
-    def get():
+    def get(self):
         pass
 
 root_node = Node(4)
-root_node.insert(5)
-root_node.insert(3)
+root_node.insert(Node(5))
+root_node.insert(Node(3))
 print(root_node.key)
 print(root_node.left_children)
 print(root_node.right_children)
