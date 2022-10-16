@@ -41,3 +41,5 @@ root.insert("Al")
 root.insert("Vahe")  # is skipped as it is already implemented
 root.insert("Vahy")
 print(root.get("Thomas"))
+# print(root.get(14))
+# print(root.get(3))
