@@ -49,4 +49,4 @@ print(root.get("Thomas"))
 print(root.get("Vahe"))
 print(root.get("Zeke"))
 print(root.get("Al"))
-print(root.get("Alex"))
+print(root.get("Alex")) # should return "Alex is not found"
