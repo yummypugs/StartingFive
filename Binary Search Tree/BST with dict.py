@@ -37,16 +37,16 @@ class Node:
             return str(self.value)
 
 
-root = Node("Vahe", 55)
-root.insert("Thomas", 45)
-root.insert("Zeke", 123)
-root.insert("Al", 23)
-root.insert("Vahy", 66)
+tree = Node("Vahe", 55)
+tree.insert("Thomas", 45)
+tree.insert("Zeke", 123)
+tree.insert("Al", 23)
+tree.insert("Vahy", 66)
 
 #root.insert("Vahe")  # is skipped as it is already implemented
 
-print(root.get("Thomas"))
-print(root.get("Vahe"))
-print(root.get("Zeke"))
-print(root.get("Al"))
-print(root.get("Alex")) # should return "Alex is not found"
+print(tree.get("Thomas"))
+print(tree.get("Vahe"))
+print(tree.get("Zeke"))
+print(tree.get("Al"))
+print(tree.get("Alex")) # should return "Alex is not found"
