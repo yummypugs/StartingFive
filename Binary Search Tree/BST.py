@@ -34,10 +34,11 @@ class Node:
             print(str(self.data) + ' is found')
 
 
-root = Node(12)
-root.insert(6)
-root.insert(14)
-root.insert(3)
-print(root.get(7))
-print(root.get(14))
-print(root.get(3))
+root = Node("Vahe")
+root.insert("Thomas")
+root.insert("Zeke")
+root.insert("Al")
+root.insert("Vahe")
+print(root.get("Thomas"))
+# print(root.get(14))
+# print(root.get(3))
