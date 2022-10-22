@@ -26,22 +26,29 @@ class Node:
         :return: returns nothing, changes child nodes
         """
         if self.key:  # this section will be executed if key value of node is already defined during initialization
-            if key < self.key:  # if key value defined in the insert function is less than the key value defined during initialization, this section will be executed
+            if key < self.key:  # if key value defined in the insert function is less than the key value defined
+                # during initialization, this section will be executed
                 if self.left_child is None:  # if left_child is being defined for the first time, this section will be executed
                     # left_child variable defined during initialization will be assigned key value defined in insert function
                     self.left_child = Node(key, value)
-                # if left_child value has already been taken (i.e it has already been defined beforehead by calling insert function), this section will be executed
+                # if left_child value has already been taken (i.e it has already been defined beforehead by calling
+                # insert function), this section will be executed
                 else:
-                    # a recursive function of insert is defined, so the alrogithm will run back though the insert function and the value will be stored in the subclass of initially defined left_child value, so as to form a binary tree
+                    # a recursive function of insert is defined, so the alrogithm will run back though the insert
+                    # function and the value will be stored in the subclass of initially defined left_child value,
+                    # so as to form a binary tree
                     self.left_child.insert(key, value)
-            elif key > self.key:  # if key value defined in the insert function is greater than the key value defined during initialization, this section will be executed
-                if self.right_child is None:  # if right_child is being defined for the first time, this section will be executed
-                    # right_child variable defined during initialization will be assigned key value defined in insert function
-                    self.right_child = Node(key, value)
-                # if right_child value has already been taken (i.e it has already been defined beforehead by calling insert function), this section will be executed
-                else:
-                    # a recursive function of insert is defined, so the alrogithm will run back though the insert function and the value will be stored in the subclass of initially defined left_child value, so as to form a binary tree
-                    self.right_child.insert(key, value)
+            elif key > self.key:  # if key value defined in the insert function is greater than the key value defined
+                # during initialization, this section will be executed
+                if self.right_child is None:  # if right_child is being defined for the first time, this section will
+                    # be executed
+                    self.right_child = Node(key, value)  # right_child variable defined during initialization will be
+                    # assigned key value defined in insert function
+                else:  # if right_child value has already been taken (i.e it has already been defined beforehead by
+                    # calling insert function), this section will be executed
+                    self.right_child.insert(key, value)  # a recursive function of insert is defined, so the
+                    # alrogithm will run back though the insert function and the value will be stored in the subclass
+                    # of initially defined left_child value, so as to form a binary tree
         else:  # this section will be executed if key value of node has not been defined
             # this is to define key value of node if it has not been defined during initialization
             self.key = key
